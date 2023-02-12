@@ -1,21 +1,23 @@
-###
-Notification-receiver
 
-Environment Variables for local
+# Notification-receiver
+This service is used to receive generic endpoint request from Flux's notification controller and update image tags of deployments into DynamoDB
+
+
+### Environment Variables for local
 ```
 NODE_ENV=local
 REMOTE_FUNCTION=flux-event
 AWS_SDK_LOAD_CONFIG="true"
 ```
 
-Environment Variables for non-local
+### Environment Variables for non-local
 ```
 NODE_ENV=staging|production
 REMOTE_FUNCTION=flux-event
 AWS_SDK_LOAD_CONFIG="true"
 ```
 
-Sample request by Flux's notification controller
+### Sample request by Flux's notification controller
 ```
 {
     "involvedObject": {
